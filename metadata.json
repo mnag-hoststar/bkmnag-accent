@@ -60,7 +60,7 @@
     "fontSwatch": {
        "title": "Montserrat",
         "font1": {
-            "font-family": "\"Montserrat\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "32px",
             "font-weight": "400",
             "line-height": "42px",
@@ -92,7 +92,7 @@
             "letter-spacing": "inherit"
         },
         "font5": {
-            "font-family": "\"Raleway\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
             "font-size": "14px",
             "font-weight": "300",
             "line-height": "22px",
@@ -100,7 +100,7 @@
             "letter-spacing": "inherit"
         },
         "font6": {
-            "font-family": "\"Montserrat\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "14px",
             "font-weight": "400",
             "line-height": "28px",
@@ -111,7 +111,7 @@
             "background-color-hover": "@color-swatch1"
         },
         "font7": {
-            "font-family": "\"Montserrat\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "13px",
             "font-weight": "inherit",
             "line-height": "24px",
@@ -121,7 +121,7 @@
             "background-color-hover": "@color-swatch2"
         },
         "font8": {
-            "font-family": "\"Montserrat\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "42px",
             "font-weight": "400",
             "line-height": "36px",
@@ -131,15 +131,15 @@
         "font9": {
             "font-family": "\"Georgia\", serif",
             "font-size": "18px",
-            "font-weight": "300",
+            "font-weight": "400",
             "line-height": "30px",
             "color": "darken(@color-swatch4,20%)",
             "letter-spacing": "inherit"
         },
         "font10": {
-            "font-family": "\"Montserrat\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "24px",
-            "font-weight": "600",
+            "font-weight": "700",
             "line-height": "34px",
             "color": "@color-swatch2",
             "letter-spacing": "inherit"
