@@ -1,7 +1,7 @@
 {
 	"name":"Accent",
-	"thumbnail":"accent.png",
-	"screenshot":"accent.png",
+	"thumbnail":"thumbnail.png",
+	"screenshot":"accent-screenshot.jpg",
 	"templateType":"standard",
     "pageTypes": ["home"],
     "tags": {
