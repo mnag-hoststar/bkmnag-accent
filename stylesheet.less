@@ -22,20 +22,21 @@ body {
 
 .widget.content {
 	a {
-	font-family: @font-swatch2-font-family;
-	font-size: @font-swatch5-font-size;
-	font-weight: @font-swatch5-font-weight;
-	color: @font-swatch6-color;
-	text-decoration: none;
+		font-family: @font-swatch2-font-family;
+		font-size: @font-swatch5-font-size;
+		font-weight: @font-swatch5-font-weight;
+		color: @font-swatch6-color;
+		text-decoration: none;
+		&:hover {
+		    color: @color-swatch2;
+    		border-bottom: 1px solid @color-swatch2;
+		}
 	}
 }
 
-
-
-
-
 a:hover {
 	text-decoration: none;
+
 }
 
 blockquote {
@@ -280,9 +281,6 @@ footer.bk-footer {
 	float: left;
 	display: block;
 	&.home {
-		.text {
-			color: @color-swatch2;
-		}
 	}
 }
 
@@ -348,7 +346,6 @@ footer.bk-footer {
 
 .widget.feature .feature-bgimg {
 	height: 600px;
-	display: inherit;
 }
 
 .widget.feature .feature-bgimg .content {
