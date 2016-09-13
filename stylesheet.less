@@ -247,11 +247,14 @@ footer.bk-footer {
 	margin-top: 3em;
 	text-align: center;
 	color: contrast(@color-swatch2, black, white, 43%);
-	 h1, h2, h3, h4, p, a {
-	 	color: contrast(@color-swatch2, black, white, 43%);
+	h1, h2, h3, h4, p, a {
+		color: contrast(@color-swatch2, black, white, 43%);
 	}
 	h1, h2, h3, h4 {
 		padding-bottom: 20px;
+	}
+	a {
+		border-bottom: 1px solid contrast(@color-swatch2, black, white, 43%);
 	}
 }
 
@@ -929,18 +932,22 @@ hr.line {
 
 .widget.profile span,
 .widget.profile a {
-		display: block;
-		font-size: bkscale(@font-swatch5-font-size,1.1);
-		font-family: @font-swatch5-font-family;
-		line-height: @font-swatch5-line-height;
-		font-weight: @font-swatch5-font-weight;
+	font-size: bkscale(@font-swatch5-font-size,1.1);
+	font-family: @font-swatch5-font-family;
+	line-height: @font-swatch5-line-height;
+	font-weight: @font-swatch5-font-weight;
+	color: @font-swatch6-color;
+}
+
+.widget.profile a {
+	border-bottom: 1px solid @font-swatch6-color;
 }
 
 
-
 .widget.profile a:hover {
-		color: @color-swatch3;
-		text-decoration: none;
+	color: @color-swatch3;
+	text-decoration: none;
+	border-bottom: 1px solid @color-swatch3;
 }
 
 /* FOOTER PROFILE - twitter in profile widget*/
