@@ -255,6 +255,9 @@ footer.bk-footer {
 	}
 	a {
 		border-bottom: 1px solid contrast(@color-swatch2, black, white, 43%);
+		&:hover {
+			border-bottom: 1px solid @color-swatch3;
+		}
 	}
 }
 
@@ -936,19 +939,8 @@ hr.line {
 	font-family: @font-swatch5-font-family;
 	line-height: @font-swatch5-line-height;
 	font-weight: @font-swatch5-font-weight;
-	color: @font-swatch6-color;
 }
 
-.widget.profile a {
-	border-bottom: 1px solid @font-swatch6-color;
-}
-
-
-.widget.profile a:hover {
-	color: @color-swatch3;
-	text-decoration: none;
-	border-bottom: 1px solid @color-swatch3;
-}
 
 /* FOOTER PROFILE - twitter in profile widget*/
 /*  LATEST TWEET IN FOOTER */
