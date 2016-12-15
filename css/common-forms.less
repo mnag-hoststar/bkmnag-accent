@@ -72,54 +72,25 @@
 // Text Inputs
 .contactform input, .contactform textarea,
 .advancedcontactform input, .advancedcontactform textarea,
-.widget.profile form fieldset input.email,
+.widget.profile form fieldset input,
 .signupform fieldset input.email,
 .blogsearch input.blog-search-input,
 .widget input[type="text"],
 .widget input[type="email"],
 .productlist-filter .productlist-search input,
 .signupform fieldset input {
-	background-color: mix(@color-swatch5, @color-swatch1,10%);
+	background-color: darken(@color-swatch1,10%);
 	border: none;
-	//border-radius: 4px;
-	padding: 0 1em;
-	margin-right: 0.6em;
+	height: 40px;
+	padding: .6em 1em;
 	text-indent: 0;
-	height: (@font-swatch7-font-size * 2.5 + 1);
-	line-height: (@font-swatch7-font-size * 2.5 + 1);
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-
-	@media only screen and (max-width : 460px) {
-		font-size: bkscale(@font-swatch7-font-size, 0.75);
-		height: (@font-swatch7-font-size * 2);
-		line-height: (@font-swatch7-font-size * 2);
-	} 
-
-
-	&:hover {
-		
-	}
-
 	&:focus {
-		background-color:  mix(@color-swatch5, @color-swatch1,15%);
-		color: darken(@font-swatch5-color, 20%);
-		outline: none;
-		box-shadow: 0 0 5px @color-swatch7;
+		background-color: darken(@color-swatch1,5%);
 	}
 }
 
 textarea {
-	line-height: bkscale(@font-swatch7-line-height, 0.7);
-	min-height: 10em;
-	padding-top: 0.6em;
-	padding-bottom: 0.6em;
-	@media only screen and (max-width : 460px) {
-		line-height: bkscale(@font-swatch7-line-height, 0.5);
-		padding-top: 0.5em;
-		padding-bottom: 0.5em;
-	} 
+	min-height: 8em;
 }
 
 // Labels
@@ -128,6 +99,7 @@ textarea {
 .blog-search-form label,
 .widget.ecomcheckout .delivery label,
 .ecom-product-vartitle {
+	display: inline-block;
     font-family:@font-swatch5-font-family;
     font-size:@font-swatch5-font-size;
     font-weight:@font-swatch5-font-weight;
@@ -179,6 +151,10 @@ select {
 	&:focus {
 		border-color: @color-swatch2;
 	}
+}
+
+.form-group {
+	margin-bottom: 1em;
 }
 
 // Hides *custom* dropdown arrow in Firefox 30 and above
