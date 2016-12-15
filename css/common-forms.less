@@ -71,7 +71,7 @@
 
 // Text Inputs
 .contactform input, .contactform textarea,
-.advancedcontactform input,
+.advancedcontactform input, .advancedcontactform textarea,
 .widget.profile form fieldset input.email,
 .signupform fieldset input.email,
 .blogsearch input.blog-search-input,
@@ -144,45 +144,40 @@ textarea {
 
 
 // Selects
-.widget.ecomproductslist .productlist-filter,
-.widget.ecomcheckout .delivery,
-.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation
-{
-	& select {
-		text-indent: 0.01px;
-		text-overflow: '';
-		cursor: pointer;
-		position: relative;
-		background-repeat: no-repeat;
-		background-position: right center;
-		margin: 0;
-		border: 1px solid @color-swatch3;
-		background-color: @color-swatch1;
-		color: @color-swatch5;
-		//border-radius: 5px;
-		position: relative;
-		display: inline-block;
-		font-family: @font-swatch7-font-family;
-		font-size: @font-swatch7-font-size;
-		font-weight: @font-swatch7-font-weight;
-		height: (@font-swatch7-font-size * 2.5 );
-		line-height: 1;
-		webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
+select {
+	text-indent: 0.01px;
+	text-overflow: '';
+	cursor: pointer;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: right center;
+	margin: 0;
+	border: 1px solid @color-swatch3;
+	background-color: @color-swatch1;
+	color: @color-swatch5;
+	//border-radius: 5px;
+	position: relative;
+	display: inline-block;
+	font-family: @font-swatch7-font-family;
+	font-size: @font-swatch7-font-size;
+	font-weight: @font-swatch7-font-weight;
+	height: (@font-swatch7-font-size * 2.5 );
+	line-height: 1;
+	webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 
-		@media only screen and (max-width : 460px) {
-			font-size: bkscale(@font-swatch7-font-size, 0.75);
-			height: (@font-swatch7-font-size * 2);
-		} 
+	@media only screen and (max-width : 460px) {
+		font-size: bkscale(@font-swatch7-font-size, 0.75);
+		height: (@font-swatch7-font-size * 2);
+	} 
 
-		&:hover {
-			border-color: @color-swatch2;
-		}
+	&:hover {
+		border-color: @color-swatch2;
+	}
 
-		&:focus {
-			border-color: @color-swatch2;
-		}
+	&:focus {
+		border-color: @color-swatch2;
 	}
 }
 
