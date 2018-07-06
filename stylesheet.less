@@ -258,6 +258,23 @@ footer.bk-footer {
 	}
 }
 
+.gdpr-footer {
+    background-color: @color-swatch2;
+    
+    .gdpr-footer__link {
+		margin: 15px;
+		padding: 0;
+    	color: contrast(@color-swatch2, black, white, 43%);
+		border-bottom: 1px solid contrast(@color-swatch2, black, white, 43%);
+		line-height: @font-swatch5-line-height;
+		
+		&:hover, &:active {
+			color: @color-swatch3;
+			border-bottom: 1px solid @color-swatch3;
+		}
+    }
+}
+
 /* ===============================
    Language Selector
    =============================== */
