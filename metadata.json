@@ -3,6 +3,7 @@
 	"thumbnail":"thumbnail.png",
 	"screenshot":"accent-screenshot.jpg",
 	"templateType":"standard",
+    "versionTenCompatible": 1,
     "pageTypes": ["home"],
     "tags": {
     "en": ["minimal", "clean", "photography", "modern", "colorful", "colourful", "flexible", "open", "simple", "sans-serif"],

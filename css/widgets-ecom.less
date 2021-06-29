@@ -164,6 +164,8 @@
 	width: auto;
 	
 	.ecom-productslist-products {
+		margin-left: 0;
+		max-width: 100%;
 
 		// ----------------------------------------------------------------------------------------------------------------------
 		// Filter
@@ -291,6 +293,18 @@
 			color: fade(@color-swatch5, 60%);
 			font-size: bkscale(@font-swatch5-font-size, 0.8);
 			margin: 1em 0;
+
+			.style--light & {
+	        color: fade(@contrast--light, 90%);
+	    }
+
+	    .style--accent & {
+	        color: fade(@contrast--accent, 90%);
+	    }
+
+	    .style--dark & {
+	        color: fade(@contrast--dark, 90%);
+	    }
 		}
 		
 		// -------------------------------------------------------------------------------------------------------------------------
@@ -335,6 +349,22 @@
 				position: relative;
 				overflow: visible;
 				border: 20px solid 	mix(@color-swatch2, #fff, 6%);
+
+				.style--light & {
+					background-color: darken(@color--light, 10%);
+					border-color: darken(@color--light, 10%);
+				}
+
+				.style--accent & {
+					background-color: darken(@color--accent, 10%);
+					border-color: darken(@color--accent, 10%);
+				}		
+
+				.style--dark & {
+					background-color: lighten(@color--dark, 10%);
+					border-color: lighten(@color--dark, 10%);
+				}		
+
 				@media @mobile {
 					border: 10px solid 	mix(@color-swatch2, #fff, 6%);
 					height: 150px;
@@ -351,10 +381,36 @@
 				border-bottom: 3px solid mix(@color-swatch2, #fff, 6%);
 				padding: 0.5em 0;
 					
+					.style--light & {
+						border-color: lighten(@color--dark, 10%);
+			      color: @contrast--light;
+			    }
+
+			    .style--accent & {
+			    	border-color: darken(@color--accent, 15%);
+			      color: @contrast--accent;
+			    }
+
+			    .style--dark & {
+			    	border-color: lighten(@color--dark, 20%);
+			      color: @contrast--dark;
+			    }
 			}
 			// Price
 			.ecom-productlist-price {
 				color: @color-swatch5;
+
+				.style--light & {
+		        color: fade(@contrast--light, 90%);
+		    }
+
+		    .style--accent & {
+		        color: fade(@contrast--accent, 90%);
+		    }
+
+		    .style--dark & {
+		        color: fade(@contrast--dark, 90%);
+		    }
 			}
 		}
 	}
@@ -439,9 +495,6 @@
 				.ecom-product-image-wrap {
 					margin: 0 17px 17px 0;
 					cursor: pointer;
-					img {
-
-					}
 				}
 			}
 		}
@@ -535,15 +588,27 @@
 	max-width: 100%;
 		
 	.ecom-featuredproducts-header {
+		background: transparent;
 		margin-left: 0;
 		margin-bottom: 2em;
-		h2 {
-			
+
+		.style--light & {
+			border-color: darken(@color--light, 10%);
+		}
+
+		.style--accent & {
+			border-color: darken(@color--accent, 10%);
+		}		
+
+		.style--dark & {
+			border-color: lighten(@color--dark, 10%);
 		}
 	}
 
 	// Products
 	.ecom-featuredproducts-wrap {
+		margin-left: 0;
+		max-width: 100%;
 		
 		.clearfix;
 
@@ -644,6 +709,18 @@
 			    -webkit-align-items: center;
 			    -ms-flex-align: center;
 			    align-items: center;
+
+			 	.style--light & {
+					background-color: darken(@color--light, 10%);
+				}
+
+				.style--accent & {
+					background-color: darken(@color--accent, 10%);
+				}		
+
+				.style--dark & {
+					background-color: lighten(@color--dark, 10%);
+				}
 				
 				@media @mobile {
 					padding: 16px;
@@ -667,6 +744,19 @@
 					line-height: @font-swatch4-line-height;
 					text-align: center;
 					color: @color-swatch3;
+
+					.style--light & {
+			        color: @color--accent;
+			    }
+
+			    .style--accent & {
+			        color: @contrast--accent;
+			    }
+
+			    .style--dark & {
+			        color: @contrast--dark;
+			    }
+
 					@media @mobile {
 						font-size: bkscale(@font-swatch4-font-size, 0.8);
 						line-height: bkscale(@font-swatch4-line-height, 0.8);
@@ -674,9 +764,24 @@
 				}
 				// Price
 				.ecom-featuredproducts-price {
-					
 					background: @color-swatch2;
-					color: @color-swatch1
+					color: @color-swatch1;
+					margin: 0 auto;
+
+					.style--light & {
+						background-color: @color--dark;
+		        color: @contrast--dark;
+			    }
+
+			    .style--accent & {
+			    	background-color: @color--dark;
+		        color: @contrast--dark;
+			    }
+
+			    .style--dark & {
+			    	background-color: @color--accent;
+		        color: @contrast--accent;
+			    }
 				}
 			}
 		}

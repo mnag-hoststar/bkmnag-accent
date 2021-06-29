@@ -18,20 +18,6 @@ body {
 	margin: 0 auto;
 }
 
-.widget.content {
-	a {
-		font-family: @font-swatch2-font-family;
-		font-size: @font-swatch5-font-size;
-		font-weight: @font-swatch5-font-weight;
-		color: @font-swatch6-color;
-		text-decoration: none;
-		&:hover {
-			color: @color-swatch3;
-			border-bottom: 1px solid @color-swatch3;
-		}
-	}
-}
-
 a:hover {
 	text-decoration: none;
 }
@@ -763,12 +749,53 @@ footer.bk-footer {
 /* ===============================
 	 CONTENT
 	 =============================== */
-
+	 
 .widget.content {
-	padding: 0;
+    padding: 0;
 	overflow: hidden;
+
 	a {
-		border-bottom: 1px solid @font-swatch6-color;
+	    border-bottom: 1px solid @font-swatch6-color;
+		font-family: @font-swatch2-font-family;
+		font-size: @font-swatch5-font-size;
+		font-weight: @font-swatch5-font-weight;
+		color: @font-swatch6-color;
+		text-decoration: none!important;
+
+		.style--light & {
+		    border-color: @color--accent;
+	        color: @color--accent;
+	    }
+
+	    .style--accent & {
+	        border-color:  @contrast--accent;
+	        color: @contrast--accent;
+	    }
+
+	    .style--dark & {
+	        border-color: @contrast--dark;
+	        color: @contrast--dark;
+	    }
+
+		&:hover {
+			color: @color-swatch3;
+			border-bottom: 1px solid @color-swatch3;
+
+			.style--light & {
+				border-color: @color--accent;
+		        color: @color--accent;
+		    }
+
+		    .style--accent & {
+		    	border-color: @contrast--accent;
+		        color: @contrast--accent;
+		    }
+
+		    .style--dark & {
+		    	border-color: @contrast--dark;
+		        color: @contrast--dark;
+		    }
+		}
 	}
 }
 
@@ -826,6 +853,18 @@ footer.bk-footer {
 
 .widget.image span.image-title:hover {
 	color: lighten(@font-swatch4-color, 30%);
+
+	.style--light & {
+        color: lighten(@contrast--light, 30%);
+    }
+
+    .style--accent & {
+        color: lighten(@contrast--accent, 30%);
+    }
+
+    .style--dark & {
+        color: lighten(@contrast--dark, 30%);
+    }
 }
 
 .widget.image span.image-description {
@@ -852,6 +891,18 @@ hr.line {
 	height: 1px;
 	width: 100%;
 	border: none;
+
+	.style--light & {
+        background-color: darken(@color--light, 10%);
+    }
+
+    .style--accent & {
+        background-color: darken(@color--accent, 10%);
+    }
+
+    .style--dark & {
+        background-color: darken(@color--dark, 10%);
+    }
 }
 
 
@@ -1009,6 +1060,12 @@ hr.line {
 			color: @font-swatch5-color;
 			background: transparent;
 		}
+
+		.style--light &,
+		.style--accent &,
+		.style--dark & {
+	        background-color: transparent;
+	    }
 	}
 }
 
@@ -1182,9 +1239,37 @@ hr.line {
 	background-position: center;
 }
 
+.widget.socialicons span a {
+	.style--light & {
+        background-color: @color--accent;
+    }
+
+    .style--accent & {
+        background-color: @color--dark;
+    }
+
+    .style--dark & {
+        background-color: @color--accent;
+    }
+}
+
 .widget.socialicons span a:hover,
 .widget.profile .bk-profile-socialicons span a:hover {
 	background-color: @font-swatch7-background-color-hover
+}
+
+.widget.socialicons span a:hover {
+	.style--light & {
+        background-color: @color--dark;
+    }
+
+    .style--accent & {
+        background-color: lighten(@color--dark, 5%);
+    }
+
+    .style--dark & {
+        background-color: darken(@color--accent, 10%);
+    }
 }
 
 
@@ -1458,9 +1543,34 @@ footer .widget.profile .twitter span,
 			-webkit-border-radius: 50%;
 			-moz-border-radius: 50%;
 			border-radius: 50%;
+
+			.style--light & {
+		        background-color: darken(@color--light, 10%);
+		    }
+
+		    .style--accent & {
+		        background-color: darken(@color--accent, 10%);
+		    }
+
+		    .style--dark & {
+		        background-color: darken(@color--dark, 10%);
+		    }
+
 			&.selected {
 				background-color: @color-swatch3;
 				border: 0;
+
+				.style--light & {
+			        background-color: @color--accent;
+			    }
+
+			    .style--accent & {
+			        background-color: @color--light;
+			    }
+
+			    .style--dark & {
+			        background-color: @color--accent;
+			    }
 			}
 		}
 	}

@@ -1,6 +1,27 @@
 // =============================================================================================
 // FORMS
 
+.widget.signupform {
+	padding: 30px;
+  	background-color: lighten(@color-swatch2,70%);
+
+  	.style--light & {
+        background-color: darken(@color--light, 10%);
+    }
+
+    .style--accent & {
+        background-color: darken(@color--accent, 10%);
+    }
+
+    .style--dark & {
+        background-color: lighten(@color--dark, 5%);
+    }
+
+    .style--background-image & {
+    	background-color: transparent;
+    }
+}
+
 // Buttons
 .widget.feature .feature-bgimg .content button,
 .contactform button, .contactform button.btn, 
@@ -19,8 +40,8 @@
 .widget.ecomcategorieslist ul li a,
 .blog-post-more-link a,
 .blog-list-footer .paginate-older,
-.widget.clicktocall a
- {
+.widget.clicktocall a,
+a.contentgroup__link {
 	padding: 0 15px;
 	display: inline-block;
 	cursor: pointer;
@@ -41,6 +62,21 @@
 	text-shadow: none;
 	border: none;
 	-webkit-font-smoothing: subpixel-antialiased !important;
+
+	.style--light & {
+		background-color: @color--accent;
+		color: @contrast--accent;
+	}
+
+	.style--accent & {
+		background-color: @color--dark;
+		color: @contrast--dark;
+	}
+
+	.style--dark & {
+		background-color: @color--accent;
+		color: @contrast--accent;
+	}
 
 	@media only screen and (max-width : 460px) {
 		padding: 0 1.2em;
@@ -78,13 +114,31 @@
 .widget input[type="email"],
 .productlist-filter .productlist-search input,
 .signupform fieldset input {
-	background-color: darken(@color-swatch1,10%);
+	background-color: darken(@color-swatch1, 10%);
 	border: none;
 	height: 40px;
 	padding: .6em 1em;
 	text-indent: 0;
+
+	.style--light & {
+		background-color: darken(@color--light, 10%);
+		color: @contrast--light;
+	}
+
+	.style--accent &,
+	.style--dark & {
+		background-color: @color--light;
+		color: @contrast--light;
+	}
+
 	&:focus {
-		background-color: darken(@color-swatch1,5%);
+		background-color: darken(@color-swatch1, 5%);
+
+		.style--light &,
+    	.style--accent &,
+    	.style--dark & {
+			background-color: darken(@color--light, 5%);
+		}
 	}
 }
 
@@ -98,7 +152,7 @@ textarea {
 .blog-search-form label,
 .widget.ecomcheckout .delivery label,
 .ecom-product-vartitle {
-	display: inline-block;
+		display: inline-block;
     font-family:@font-swatch5-font-family;
     font-size:@font-swatch5-font-size;
     font-weight:@font-swatch5-font-weight;
@@ -106,6 +160,18 @@ textarea {
     color: darken(@font-swatch5-color,10%);
     letter-spacing: @font-swatch5-letter-spacing;
     margin-bottom: 0.5em;
+
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
 
     @media only screen and (max-width : 460px) {
 		line-height: bkscale(@font-swatch4-line-height, 0.8);
@@ -116,7 +182,7 @@ textarea {
 
 // Selects
 select {
-	text-indent: 0.01px;
+	text-indent: 6px;
 	text-overflow: '';
 	cursor: pointer;
 	position: relative;
@@ -138,17 +204,41 @@ select {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 
+	.style--light & {
+		background-color: darken(@color--light, 10%);
+		border-color: @color--accent;
+	}
+
+	.style--accent & {
+		background-color: @color--light;
+		border-color: @contrast--accent;
+	}
+
+	.style--dark & {
+		background-color: @color--light;
+		border-color: @color--accent;
+	}
+
 	@media only screen and (max-width : 460px) {
 		font-size: bkscale(@font-swatch7-font-size, 0.75);
 		height: (@font-swatch7-font-size * 2);
 	} 
 
-	&:hover {
-		border-color: @color-swatch2;
-	}
-
+	&:hover,
 	&:focus {
 		border-color: @color-swatch2;
+		
+		.style--light & {
+    		border-color: darken(@color--accent, 10%);
+    	}
+    
+    	.style--accent & {
+    		border-color: darken(@contrast--accent, 10%);
+    	}
+    
+    	.style--dark & {
+    		border-color: darken(@color--accent, 10%);
+    	}
 	}
 }
 
@@ -171,19 +261,45 @@ select {
 // Placeholders
 input::-webkit-input-placeholder {
    color: mix(@color-swatch5, @color-swatch2, 16%);
+   
+    .style--light &,
+	.style--accent &,
+	.style--dark & {
+		color: fade(@contrast--light, 80%);
+	}
 }
 
 input:-moz-placeholder { /* Firefox 18- */
    color: mix(@color-swatch5, @color-swatch2, 16%);
+   
+    .style--light &,
+	.style--accent &,
+	.style--dark & {
+		color: fade(@contrast--light, 80%);
+	}
 }
 
 input::-moz-placeholder {  /* Firefox 19+ */
-   color: mix(@color-swatch5, @color-swatch2, 16%);
+   color: moz(@color-swatch5, @color-swatch2, 16%);
+   
+    .style--light &,
+	.style--accent &,
+	.style--dark & {
+		color: fade(@contrast--light, 80%);
+	}
 }
 
-input:-ms-input-placeholder {  
+input:-ms-input-placeholder {
    color: mix(@color-swatch5, @color-swatch2, 16%);
+   
+    .style--light &,
+	.style--accent &,
+	.style--dark & {
+		color: fade(@contrast--light, 80%);
+	}
 }
+
+
 
 // Privacy Checkboxes
 
@@ -213,9 +329,22 @@ input:-ms-input-placeholder {
 		
 		.form__link {
 			font-family:@font-swatch5-font-family;
-            font-size: @font-swatch5-font-size;
+         font-size: @font-swatch5-font-size;
 			font-weight:@font-swatch5-font-weight;
 			letter-spacing: @font-swatch5-letter-spacing;
+			word-break: break-word;
+
+			.style--light & {
+				color: @contrast--light;
+			}
+
+			.style--accent & {
+				color: @contrast--accent;
+			}
+
+			.style--dark & {
+				color: @contrast--dark;
+			}
 		}
 	}
 }
