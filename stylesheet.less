@@ -272,6 +272,37 @@ footer.bk-footer {
 			border-bottom: 1px solid @color-swatch3;
 		}
 	}
+
+	.widget.profile {
+        .form-group {
+            display: flex;
+            align-items: center;
+			margin: 0 auto;
+			max-width: 900px;
+
+            @media @tablet {
+                display: block;
+            }
+        }
+
+        form fieldset input {
+            min-width: 60%;
+        }
+
+        form button {
+            word-break: break-word;
+            height: auto;
+            width: auto;
+            min-width: 30%;
+            margin: 0 0 0 5px;
+            line-height: 1.25em;
+            min-height: 40px;
+
+            @media @tablet {
+                margin: 5px 0;
+            }
+        }
+	}
 }
 
 .gdpr-footer {
