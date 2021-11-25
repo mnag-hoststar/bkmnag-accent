@@ -1,4 +1,3 @@
-// =============================================================================================
 // FORMS
 
 .widget.signupform {
@@ -23,6 +22,7 @@
 }
 
 // Buttons
+
 .widget.feature .feature-bgimg .content button,
 .contactform button, .contactform button.btn, 
 .advancedcontactform button, .advancedcontactform button.btn,
@@ -84,9 +84,8 @@ a.contentgroup__link {
 	}
 }
 
-
-
 // Image buttons
+
 .widget.paypalbuynow .widget.button.paypal,
 .widget.tweet a,
 .widget.dropbox button,
@@ -99,8 +98,8 @@ a.contentgroup__link {
 	}
 }
 
-
 // Text Inputs
+
 .contactform input, .contactform textarea,
 .advancedcontactform input, .advancedcontactform textarea,
 .widget.profile form fieldset input,
@@ -143,6 +142,7 @@ textarea {
 }
 
 // Labels
+
 .contactform label, .advancedcontactform label,
 .signupform fieldset label,
 .blog-search-form label,
@@ -176,8 +176,8 @@ textarea {
 	} 
 }
 
-
 // Selects
+
 select {
 	text-indent: 6px;
 	text-overflow: '';
@@ -189,7 +189,6 @@ select {
 	border: 1px solid @color-swatch3;
 	background-color: @color-swatch1;
 	color: @color-swatch5;
-	//border-radius: 5px;
 	position: relative;
 	display: inline-block;
 	font-family: @font-swatch7-font-family;
@@ -243,7 +242,6 @@ select {
 	margin-bottom: 1em;
 }
 
-// Hides *custom* dropdown arrow in Firefox 30 and above
 @supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
 	.widget.ecomproductslist .productlist-filter,
 	.widget.ecomcheckout .delivery,
@@ -254,8 +252,8 @@ select {
 	}
 }
 
-
 // Placeholders
+
 input::-webkit-input-placeholder {
    color: mix(@color-swatch5, @color-swatch2, 16%);
    
@@ -266,7 +264,7 @@ input::-webkit-input-placeholder {
 	}
 }
 
-input:-moz-placeholder { /* Firefox 18- */
+input:-moz-placeholder {
    color: mix(@color-swatch5, @color-swatch2, 16%);
    
     .style--light &,
@@ -276,7 +274,7 @@ input:-moz-placeholder { /* Firefox 18- */
 	}
 }
 
-input::-moz-placeholder {  /* Firefox 19+ */
+input::-moz-placeholder {
    color: moz(@color-swatch5, @color-swatch2, 16%);
    
     .style--light &,
@@ -295,8 +293,6 @@ input:-ms-input-placeholder {
 		color: fade(@contrast--light, 80%);
 	}
 }
-
-
 
 // Privacy Checkboxes
 

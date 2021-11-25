@@ -1,5 +1,7 @@
-// E-COM WIDGETS =============================================================================================
-// ======= Widget: e-com Basket
+// E-COM WIDGETS
+
+// e-com Basket
+
 .widget.ecombasket {
     .ecombasket-pull {
         width: auto;
@@ -9,7 +11,6 @@
         cursor: pointer;
         user-select: none;
         line-height: (@font-swatch7-font-size * 2.5);
-        //border-radius: 5px;
         font-family: @font-swatch7-font-family;
         font-size: @font-swatch7-font-size;
         font-weight: @font-swatch7-font-weight;
@@ -44,8 +45,6 @@
         p {
             padding: 0;
         }
-
-        // Top arrow
 
         &:before {
             content: "";
@@ -135,9 +134,11 @@
         }
         .ecombasket-total-wrap {
             float: left;
+
             @media only screen and (max-width: 460px) {
                 float: none;
             }
+
             p {
                 font-size: bkscale(@font-swatch5-font-size, 1.12);
                 line-height: @font-swatch7-line-height;
@@ -146,9 +147,11 @@
                 }
             }
         }
+
         .ecombasket-summary-wrap {
             float: right;
             margin: 0;
+
             @media only screen and (max-width: 460px) {
                 float: none;
             }
@@ -226,9 +229,6 @@
                         text-align: center;
                         margin: 0 auto;
                         max-width: 600px;
-
-                        // Flex
-
                         display: -webkit-box;
                         display: -moz-box;
                         display: -ms-flexbox;
@@ -449,6 +449,7 @@
 }
 
 // e-com Categories List
+
 .widget.ecomcategorieslist {
     .clearfix;
     ul.product-category-items {
@@ -532,20 +533,14 @@
         .ecom-product-info {
             margin-bottom: 30px;
 
-            // Title
-
             .ecom-product-title {
                 color: @color-swatch5;
                 position: relative;
             }
 
-            // Variations
-
             .ecom-product-variation {
                 margin: 0 0 1em 0;
             }
-
-            // Add to cart
 
             .ecom-product-add-to-cart-btn-wrapper {
                 margin: 0 0 1em 0;
@@ -556,8 +551,6 @@
                 }
             }
 
-            // Checkout
-
             .ecom-product-go-to-checkout-btn-wrapper {
                 margin: 0 0 1em 0;
 
@@ -565,8 +558,6 @@
                     margin-top: 0;
                 }
             }
-
-            // Categories and tags
 
             .ecom-product-cattag {
                 margin: 0 0 1em 0;
@@ -623,8 +614,6 @@
         margin-left: 0;
         max-width: 100%;
         .clearfix;
-
-        // 2 products versions, span across entire width
 
         &.products-2 {
             .ecom-featuredproducts-product {

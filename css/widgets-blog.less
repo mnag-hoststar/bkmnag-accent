@@ -1,13 +1,15 @@
-// BLOG WIDGETS =============================================================================================
+// BLOG WIDGETS
+
 @bp-blog-compact: ~"only screen and (max-width : 1000px)";
 @bp-blog-small: ~"only screen and (max-width : 800px)";
 
-// ======= Widget: BlogSearch
+// BlogSearch
+
 .widget.blogsearch {
 	margin-bottom: 1em;
+
     form {
 		.form-group {
-			// Flex
 			display: -webkit-box;
 			display: -moz-box;
 			display: -ms-flexbox;
@@ -40,7 +42,6 @@
 	
 
         label {
-        	// Flex
 			-webkit-box-ordinal-group: 1;
 		    -moz-box-ordinal-group: 1;
 		    -webkit-order: 0;
@@ -54,7 +55,6 @@
 		    -webkit-align-self: auto;
 		    -ms-flex-item-align: auto;
 		    align-self: auto;
-		    // Appearance
 		    margin-right: 1em;
 		    margin-bottom: 0;	   
 
@@ -62,8 +62,7 @@
 		    	width: 100%;
 		    }
         }
-        input {  
-        	// Flex
+        input {
             -webkit-box-ordinal-group: 1;
 		    -moz-box-ordinal-group: 1;
 		    -webkit-order: 0;
@@ -80,7 +79,6 @@
         }
 
         button {
-        	// Flex
             -webkit-box-ordinal-group: 1;
 		    -moz-box-ordinal-group: 1;
 		    -webkit-order: 0;
@@ -94,17 +92,13 @@
 		    -webkit-align-self: auto;
 		    -ms-flex-item-align: auto;
 		    align-self: auto;
-
 		    position: relative;
 		    top: 0px;
         }
     }
 }
 
-
-
-
-// ======= Widget: Blog Post List
+// Blog Post List
 .widget.blogpostlist {
 	
 	.blog-post-list {
@@ -195,20 +189,20 @@
 			}
 		}
 	}
+
 	.blog-list-footer {
 		padding: 0;
 	}
 }
-
-
-// ============================================================================================================================== 
-// Widget: Blog Post
+ 
+// Blog Post
 
 .widget.blogpost {
 	.blog-post-item {
 		.clearfix;
 
 		// Image
+
 		.blog-post-feature-image-wrap {
 			padding-bottom: 30%;
 			background-size: cover;
@@ -221,12 +215,11 @@
 				display: none;
 			}
 		}
+
 		// Title and Content Wrap
+
 		.blog-post-title-content-wrap {
-			
-			// Title
 			h1.blog-post-title {
-				// color: @color-swatch1;
 				border-bottom: none;
 				padding: 0;
 				padding: 1.2em 0 1.2em;
@@ -236,13 +229,13 @@
 			    line-height: @font-swatch1-line-height;
 			    letter-spacing: @font-swatch1-letter-spacing;
 			    font-size: @font-swatch1-font-size;
+
 			    @media @bp-blog-compact {
 			    	font-size: bkscale(@font-swatch1-font-size, 0.7);
 				    line-height: bkscale(@font-swatch1-line-height, 0.7);
 			    }
-			   
 			}
-			// Content
+			
 			.blog-post-content, .blog-post-body {
 				float: left;
 				width: 70%;
@@ -254,9 +247,8 @@
 			    }
 			}
 		}
-		// Meta data
+		
 		.blog-post-metadata {
-			// Date
 			time.blog-post-publish-date {
 				color: @color-swatch5;
 				font-size: @font-swatch5-font-size;
@@ -265,50 +257,59 @@
 				float: right;
 				width: 30%;
 				padding: 0 0 1em 0;
+
 				@media @bp-blog-small {
 			    	float: none;
 			    	width: auto;
 			    }
+
 			    @media @mobile {
 			    	padding: 0 0 0.5em 0;
 			    }
 			}
-			// Category
+			
 			div.blog-post-category {
 				border-bottom: 1px solid  fade(@color-swatch5,20%);
 				float: right;
 				width: 30%;
 				padding: 1em 0;
+
 				@media @bp-blog-small {
 			    	float: none;
 			    	width: auto;
 			    }
+
 			    @media @mobile {
 			    	padding: 0.5em 0;
 			    }
+
 				.blog-post-category-label {
 					&:after {
 						content: ": ";
 					}
 				}
 			}
-			// Tags
+			
 			.blog-post-tags {
 				float: right;
 				width: 30%;
 				padding: 1em 0;
+
 				@media @bp-blog-small {
 			    	float: none;
 			    	width: auto;
 			    }
+
 			    @media @mobile {
 			    	padding: 0.5em 0;
 			    }
+
 				.blog-post-tags-label {
 					&:after {
 						content: ": ";
 					}
 				}
+
 				ol.blog-post-tags-list {
 					.blog-post-tag {
 						a {
@@ -316,8 +317,6 @@
 							padding: 0em 0.7em;
 							background-color: @font-swatch7-background-color;
 							color: @font-swatch7-color;
-							//letter-spacing: 1px;
-							//border-radius: 3px;
 							border: 1px solid darken(@color-swatch3,5%);
 							box-shadow: 0px 3px 0px darken(@color-swatch3,15%); 
 
@@ -330,15 +329,19 @@
 				}
 			}
 		}
+
 		// Sharing
+
 		.blog-post-sharing {
 			margin-top: 2em;
 			float: right;
 			width: 30%;
+
 			@media @bp-blog-small {
 		    	float: none;
 		    	width: auto;
 		    }
+
 			button.btn {
 				width: 40px;
 				height: 40px;
@@ -366,12 +369,15 @@
 				span {
 					display: none;
 				}
+
 				&.facebook {
 					background-image: image('/images/ico_s_facebook.png');
 				}
+
 				&.twitter {
 					background-image: image('/images/ico_s_twitter.png');
 				}
+
 				&.googleplus {
 					background-image: image('/images/ico_s_google+.png');
 				}
