@@ -74,7 +74,7 @@ a.contentgroup__link {
 		color: @contrast--accent;
 	}
 
-	@media only screen and (max-width : 460px) {
+	@media @mobile-small {
 		padding: 0 1.2em;
 	} 
 
@@ -170,7 +170,7 @@ textarea {
         color: @contrast--dark;
     }
 
-    @media only screen and (max-width : 460px) {
+    @media @mobile-small {
 		line-height: bkscale(@font-swatch4-line-height, 0.8);
 		font-size:bkscale(@font-swatch4-font-size, 0.8);
 	} 
@@ -215,7 +215,7 @@ select {
 		border-color: @color--accent;
 	}
 
-	@media only screen and (max-width : 460px) {
+	@media @mobile-small {
 		font-size: bkscale(@font-swatch7-font-size, 0.75);
 		height: (@font-swatch7-font-size * 2);
 	} 
