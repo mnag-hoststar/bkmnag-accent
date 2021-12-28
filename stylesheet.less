@@ -32,13 +32,8 @@ a:hover {
 	text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	word-break: break-word;
 }
 
-blockquote {
-	margin: 20px 0 30px;
-	quotes: "\201C""\201D""\2018""\2019";
 	font-family: @font-swatch5-font-family;
 	font-size: bkscale(@font-swatch5-font-size, 1.1);
 	font-weight: @font-swatch5-font-weight;
@@ -47,64 +42,22 @@ blockquote {
 	padding: 10px 1em;
 	word-break: break-word;
 
-	&:before {
-		font-family: @font-swatch4-font-family;
-		color: @color-swatch3;
-		content: open-quote;
-		font-size: 2em;
-		line-height: .1em;
-		margin-right: 0;
-		vertical-align: -.2em;
 	}
 	
-	&:after {
-		font-family: @font-swatch4-font-family;
-		color: @color-swatch3;
-		content: close-quote;
-		font-size: 2em;
-		line-height: .1em;
-		margin-left: 0;
-		vertical-align: -.3em;
 	}
 	
-	p {
-		display: inline;
-		font-family: @font-swatch5-font-family;
-		font-size: bkscale(@font-swatch5-font-size, 1.1);
-		font-weight: @font-swatch5-font-weight;
-		line-height: @font-swatch5-line-height;
-		color: lighten(@color-swatch5, 20%);
-		word-break: break-word;
+	}
+
+
+
 	}
 }
 
-// CUSTOM CSS
 
-.main {
-	padding: 2em 0;
 
-	.widget {
-		clear: both;
-	}
-}
-
-// DEFAULT PAGE TYPE
-
-// TYPOGRAPHY
-
-ul, ol {
-    margin: 0;
-    padding: 1em 0 1em 2em;
-    line-height: 1.5em;
 	
-	li {
-		padding-left: 5px;
-		padding-bottom: 0.5em;
 	}
-}
 
-.content .bk-content-text ol {
-	list-style-position: outside;
 }
 
 // HEADER
@@ -434,7 +387,7 @@ footer.bk-footer {
     	    height: @language-line-height;
     	}
     	&:after {
-    	    content: "";
+    	    content: " ";
             display: block;
     	    height: @language-padding*2;
     	}
@@ -664,7 +617,7 @@ footer.bk-footer {
 	}
 }
 
-// EXTENDED NAVIGATION
+// NAVIGATION
 
 .widget.navigation,
 .widget.extendednavigation {
