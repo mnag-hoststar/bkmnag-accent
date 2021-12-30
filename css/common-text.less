@@ -180,4 +180,47 @@ code {
 		border-color: @color--accent;
 	}
 }
+
+// Blockquote
+
+blockquote {
+	margin: 20px 0 30px;
+	quotes: "\201C""\201D""\2018""\2019";
+	font-family: @font-swatch5-font-family;
+	font-size: bkscale(@font-swatch5-font-size, 1.1);
+	font-weight: @font-swatch5-font-weight;
+	line-height: @font-swatch5-line-height;
+	color: lighten(@color-swatch5, 20%);
+	padding: 10px 1em;
+	word-break: break-word;
+
+	&:before {
+		font-family: @font-swatch4-font-family;
+		color: @color-swatch3;
+		content: open-quote;
+		font-size: 2em;
+		line-height: .1em;
+		margin-right: 0;
+		vertical-align: -.2em;
+	}
+	
+	&:after {
+		font-family: @font-swatch4-font-family;
+		color: @color-swatch3;
+		content: close-quote;
+		font-size: 2em;
+		line-height: .1em;
+		margin-left: 0;
+		vertical-align: -.3em;
+	}
+	
+	p {
+		display: inline;
+		font-family: @font-swatch5-font-family;
+		font-size: bkscale(@font-swatch5-font-size, 1.1);
+		font-weight: @font-swatch5-font-weight;
+		line-height: @font-swatch5-line-height;
+		color: lighten(@color-swatch5, 20%);
+		word-break: break-word;
+	}
 }
