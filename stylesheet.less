@@ -1394,7 +1394,7 @@ hr.line {
 			display: inline-block;
 			vertical-align: middle;
 			margin-right: 1em;
-			background: #fff;
+			background: transparent;
 			padding: 4px 3px 0 4px;
         	-webkit-border-radius: 4px;
         	-moz-border-radius: 4px;
@@ -1601,7 +1601,7 @@ hr.line {
 		background-position: right center;
 		font-size: @font-swatch5-font-size;
 		color: @font-swatch5-color;
-		text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+		text-shadow: 0 1px 0 fade(@color__container--background, 50%);
 		text-decoration: none;
 		cursor: pointer;
 
@@ -1818,7 +1818,7 @@ footer .widget.profile .twitter,
 // MAP
 
 .widget.map {
-	border: 1px solid #dddddd;
+	border: 1px solid @color-swatch3;
 }
 
 // SLIDESHOW
@@ -1863,29 +1863,29 @@ footer .widget.profile .twitter,
 				width: 30px;
 				height: 30px;
 			}
+		
+			.responsivecolumns & {
+				width: 30px;
+				height: 30px;
+			}
+
+			&:after {
+				color: @color-swatch1;
+				top: 50%;
+				height: 22px;
+				margin-top: -11px;
+			}
 		}
 
 		.btn-prev {
 			&:after {
 				content: "\2190";
-				color: #fff;
-				top: 7px;
-
-				@media @mobile {
-					top: 1px;
-				}
 			}
 		}
 
 		.btn-next {
 			&:after {
 				content: "\2192";
-				color: #fff;
-				top: 7px;
-
-				@media @mobile {
-					top: 1px;
-				}
 			}
 		}
 		
@@ -1912,7 +1912,7 @@ footer .widget.profile .twitter,
 			}
 
 			&:after {
-				color: #fff;
+				color: @color-swatch1;
 				letter-spacing: -4px;
 				top: -7px;
 			
