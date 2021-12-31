@@ -34,7 +34,7 @@ a.contentgroup__link {
 	line-height: (@font-swatch7-font-size * 2.5);
 	font-family: @font-swatch7-font-family;
 	font-size: @font-swatch7-font-size;
-	font-weight:@font-swatch7-font-weight;
+	font-weight: @font-swatch7-font-weight;
 	background-color: @font-swatch7-background-color;
 	color: @font-swatch7-color;
 	text-decoration: none;
@@ -152,6 +152,7 @@ textarea {
 .signupform fieldset label,
 .blog-search-form label,
 .widget.ecomcheckout .delivery label,
+.ecom-product-vartitle {
 	display: block;
 	font-family: @font-swatch5-font-family;
 	font-size: @font-swatch5-font-size;
@@ -247,6 +248,12 @@ select {
 			border-color: darken(@color--accent, 10%);
 		}
 	}
+
+	&::-ms-expand {
+		display: none;
+	}
+}
+
 .widget.ecomproductslist .productlist-filter,
 .widget.ecomcheckout .delivery,
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation {
