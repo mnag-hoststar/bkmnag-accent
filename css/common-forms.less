@@ -84,7 +84,7 @@ a.contentgroup__link {
 	}
 }
 
-// Image buttons
+// Image Buttons
 
 .widget.paypalbuynow .widget.button.paypal,
 .widget.tweet a,
@@ -92,6 +92,7 @@ a.contentgroup__link {
 .widget.clicktocall a {
 	padding-left: 50px;
 	background-position: 18px center;
+
 	&:hover {
 		padding-left: 50px;
 		background-position: 18px center;
@@ -116,8 +117,10 @@ a.contentgroup__link {
 
 // Text Inputs
 
-.contactform input, .contactform textarea,
-.advancedcontactform input, .advancedcontactform textarea,
+.contactform input,
+.contactform textarea,
+.advancedcontactform input,
+.advancedcontactform textarea,
 .widget.profile form fieldset input,
 .signupform fieldset input.email,
 .blogsearch input.blog-search-input,
@@ -146,8 +149,8 @@ a.contentgroup__link {
 		background-color: darken(@color-swatch1, 5%);
 
 		.style--light &,
-    	.style--accent &,
-    	.style--dark & {
+		.style--accent &,
+		.style--dark & {
 			background-color: darken(@color--light, 5%);
 		}
 	}
@@ -159,40 +162,41 @@ textarea {
 
 // Labels
 
-.contactform label, .advancedcontactform label,
+.contactform label,
+.advancedcontactform label,
 .signupform fieldset label,
 .blog-search-form label,
 .widget.ecomcheckout .delivery label,
-.ecom-product-vartitle {
-	display: inline-block;
-    font-family:@font-swatch5-font-family;
-    font-size:@font-swatch5-font-size;
-    font-weight:@font-swatch5-font-weight;
-    line-height:@font-swatch5-line-height;
-    color: darken(@font-swatch5-color,10%);
-    letter-spacing: @font-swatch5-letter-spacing;
-    margin-bottom: 0.5em;
+	display: block;
+	font-family: @font-swatch5-font-family;
+	font-size: @font-swatch5-font-size;
+	font-weight: @font-swatch5-font-weight;
+	line-height: @font-swatch5-line-height;
+	color: darken(@font-swatch5-color,10%);
+	letter-spacing: @font-swatch5-letter-spacing;
+	margin-bottom: 0.5em;
 	word-break: break-word;
 
-    .style--light & {
-        color: @contrast--light;
-    }
+	.style--light & {
+		color: @contrast--light;
+	}
 
-    .style--accent & {
-        color: @contrast--accent;
-    }
+	.style--accent & {
+		color: @contrast--accent;
+	}
 
-    .style--dark & {
-        color: @contrast--dark;
-    }
+	.style--dark & {
+		color: @contrast--dark;
+	}
 
-    @media @mobile-small {
+	@media @mobile-small {
 		line-height: bkscale(@font-swatch4-line-height, 0.8);
 		font-size:bkscale(@font-swatch4-font-size, 0.8);
 	} 
 }
 
-// Selects
+// Dropdowns
+
 
 select {
 	text-indent: 6px;
