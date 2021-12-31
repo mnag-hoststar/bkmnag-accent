@@ -247,6 +247,14 @@ select {
 			border-color: darken(@color--accent, 10%);
 		}
 	}
+.widget.ecomproductslist .productlist-filter,
+.widget.ecomcheckout .delivery,
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation {
+	& select {
+		@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
+			background-image: none;
+		}
+	}
 }
 
 // Signup Form
@@ -280,12 +288,6 @@ select {
 	}
 }
 
-@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
-	.widget.ecomproductslist .productlist-filter,
-	.widget.ecomcheckout .delivery,
-	.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation {
-		& select {
-			background-image: none;
 		}
 	}
 }
