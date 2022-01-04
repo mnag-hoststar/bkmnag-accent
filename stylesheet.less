@@ -371,27 +371,21 @@ header.bk-header {
 		}
 
 		.companyheader {
+			display: flex;
+    		align-items: center;
 			-webkit-box-ordinal-group: 1;
-			-moz-box-ordinal-group: 1;
-			-webkit-order: 0;
-			-ms-flex-order: 0;
+			-moz-box-ordinal-group: 1
 			order: 0;
-			-webkit-box-flex: 0;
-			-moz-box-flex: 0;
-			-webkit-flex: 0 1 auto;
-			-ms-flex: 0 1 auto;
 			flex: 0 1 auto;
-			-webkit-align-self: auto;
-			-ms-flex-item-align: auto;
 			align-self: auto;
 			min-width: 30%;
 
-			@media @mobile {
-				display: block;
-			}
-
 			@media @tablet {
 				padding-right: 40px;
+			}
+
+			@media @mobile {
+				display: block;
 			}
 		}
 
@@ -449,7 +443,7 @@ header {
 
 .widget.logo {
 	display: inline-block;
-	margin-right: 10px;
+	margin-right: 20px;
 	vertical-align: middle;
 
 	.logo,
