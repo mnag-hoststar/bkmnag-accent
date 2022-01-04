@@ -1323,6 +1323,26 @@ hr.line {
 // GALLERY
 
 .widget.gallery {
+	.gallery-widget li {
+		padding-bottom: 100%/3;
+		width: 100%/3;
+
+		@media @tablet {
+			padding-bottom: 100%/2;
+			width: 100%/2;
+		}
+
+		@media @mobile {
+			padding-bottom: 100%;
+			width: 100%;
+		}
+		
+		.responsivecolumns & {
+			padding-bottom: 100%;
+			width: 100%;
+		}
+	}
+
 	.inner {
 		background-color: @color-swatch1;
 
