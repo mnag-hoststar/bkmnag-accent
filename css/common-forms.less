@@ -1,5 +1,11 @@
 // FORMS
 
+.widget.contactform,
+.widget.signupform,
+.widget.advancedcontactform {
+	max-width: @max-width;
+}
+
 // Form Group
 
 .form-group {
@@ -36,11 +42,12 @@
 .widget.ecomcategorieslist ul li a,
 .widget.yelpreview .review-body .review-link a,
 a.contentgroup__link {
-	padding: 0 15px;
-	display: inline-block;
 	cursor: pointer;
+	display: inline-block;
+	padding: 7px 15px;
+	min-height: 40px;
 	user-select: none;
-	line-height: (@font-swatch7-font-size * 2.5);
+	line-height: @font-swatch7-line-height;
 	font-family: @font-swatch7-font-family;
 	font-size: @font-swatch7-font-size;
 	font-weight: @font-swatch7-font-weight;
@@ -68,13 +75,8 @@ a.contentgroup__link {
 		color: @contrast--accent;
 	}
 
-	@media @mobile-small {
-		padding: 0 1.2em;
-	} 
-
 	&:hover {
-		background-color: darken(@font-swatch7-background-color,5%);
-	  cursor: pointer;
+		background-color: darken(@font-swatch7-background-color, 5%);
 	}
 }
 
@@ -307,6 +309,34 @@ select {
 		border: none;
 		margin: 0;
 		padding: 0;
+
+		.form-group {
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 0;
+
+			label {
+				display: none;
+			}
+		
+			input {
+				flex-grow: 1;
+				margin-right: 0.5em;
+				background-color: @color-swatch1;
+		
+				@media @mobile {
+					width: 100%;
+					margin-right: 0;
+					margin-bottom: 0.5em;
+				}
+		
+				.responsivecolumns & {
+					width: 100%;
+					margin-right: 0;
+					margin-bottom: 0.5em;
+				}
+			}
+		}
 	}
 }
 

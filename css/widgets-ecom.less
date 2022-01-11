@@ -186,7 +186,7 @@
 			flex-wrap: wrap;
 			margin: 0 auto;
 			padding: 0;
-			max-width: 800px;
+			max-width: @max-width;
 
 			@media @mobile {
 				display: block;
@@ -606,6 +606,8 @@
 
 	table.basket-summary-items-table {
 		margin-bottom: 30px;
+		width: 100%;
+		border-top: none;
 		border-spacing: 0;
 
 		tr {
@@ -734,6 +736,10 @@
 
 					@media @bp-checkout-compact {
 						position: relative;
+						right: auto;
+						top: auto;
+						margin-top: 10px;
+						text-align: left;
 					}
 				}
 
@@ -835,6 +841,15 @@
 		}
 	}
 
-        }
-    }
+	.basket-summary-continue-shopping,
+	.basket-summary-submit {
+		margin-left: 0;
+		margin-right: 10px;
+
+		@media @mobile {
+			margin-right: 0;
+			width: 100%;
+			text-align: center;
+		}
+	}
 }

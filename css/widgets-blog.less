@@ -7,6 +7,7 @@
 // BlogSearch
 
 .widget.blogsearch {
+	max-width: @max-width;
 	margin-bottom: 1em;
 
     form {
@@ -55,12 +56,11 @@
 		    -webkit-align-self: auto;
 		    -ms-flex-item-align: auto;
 		    align-self: auto;
+			width: 100%;
+			margin-top: 1em;
 		    margin-right: 1em;
-		    margin-bottom: 0;	   
-
-		    @media @mobile {
-		    	width: 100%;
-		    }
+			margin-bottom: 0.5em;
+        }
 
         input {
             -webkit-box-ordinal-group: 1;
@@ -76,6 +76,19 @@
 		    -webkit-align-self: auto;
 		    -ms-flex-item-align: auto;
 		    align-self: auto;
+			margin-right: 0.5em;
+
+			@media @mobile {
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 0.5em;
+			}
+		
+			.responsivecolumns & {
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 0.5em;
+			}
         }
 
         button {

@@ -18,6 +18,8 @@
 @mobile-small: ~"only screen and (max-width: 460px)";
 @mobile-smaller: ~"only screen and (max-width: 380px)";
 
+@max-width: 650px;
+
 body {
 	background-color: @color-swatch1;
 }
@@ -28,8 +30,14 @@ body {
 	margin: 0 auto;
 }
 
-// TYPOGRAPHY
-
+.widget.content {
+	.bk-content-text {
+		overflow: visible;
+		max-width: @max-width;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
 
 // TABLE
 
@@ -411,6 +419,14 @@ header {
 	background-color: @color-swatch1;
 }
 
+.main {
+	padding: 2em 0;
+
+	.widget {
+		clear: both;
+	}
+}
+
 // COMPANY NAME
 
 .widget.companyname {
@@ -525,7 +541,7 @@ footer.bk-footer {
             min-height: 40px;
 
             @media @tablet {
-                margin: 5px 0;
+                margin: 0 0 1em;
             }
         }
 	}
@@ -1382,6 +1398,8 @@ hr.line {
 // Yelp Review
 
 .widget.yelpreview {
+	max-width: @max-width;
+
 	ul,
 	li,
 	dl,
@@ -1415,7 +1433,6 @@ hr.line {
 		.created {
 			display: inline-block;
 			vertical-align: middle;
-			color: @color-swatch5;
 		}
 
 		.review {
@@ -1461,18 +1478,6 @@ hr.line {
 
 		.review-link {
 			margin-left: 24px;
-			font-size: bkscale(@font-swatch5-font-size, 0.8);
-
-			a {
-				background-color: @color-swatch3;
-				color: @color-swatch1;
-				padding: 0.2em 0.7em;
-
-				&:hover {
-					text-decoration: none;
-					background-color: @font-swatch7-background-color-hover;
-				}
-			}
 		}
 	}
 }
@@ -1533,16 +1538,11 @@ hr.line {
 			a,
 			time+span,
 			time {
-				font-size: bkscale(@font-swatch5-font-size, 0.8);
 				font-family: @font-swatch5-font-family;
 				line-height: 1;
 				font-weight: normal;
 				color: fade(@color-swatch5, 50%);
 				text-decoration: none;
-
-				@media @mobile {
-					font-size: bkscale(@font-swatch5-font-size, 0.6);
-				}
 			}
 			
 			.twitter-profile-pic {
@@ -1791,12 +1791,6 @@ footer .widget.profile .twitter,
 }
 
 .widget.tweet {
-	.tweet {
-		margin: 0 0 10px;
-		padding: 14px 0;
-		border: none;
-	}
-
 	a {
 		background-image: image('/images/social/socialicons-twitter.png');
 	}
@@ -1844,6 +1838,11 @@ footer .widget.profile .twitter,
 		}
 
 		@media @mobile {
+			min-height: 280px;
+			height: 280px;
+		}
+		
+		.responsivecolumns & {
 			min-height: 280px;
 			height: 280px;
 		}
@@ -1901,7 +1900,9 @@ footer .widget.profile .twitter,
 		}
 		
 		.btn-play {
-			border-radius: 4px;
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			border-radius: 50%;
 			background: rgba(0, 0, 0, 0.5);
 			font-size: 0;
 			text-indent: -99999px;
@@ -1921,6 +1922,12 @@ footer .widget.profile .twitter,
 				height: 30px;
 				top: 0;
 			}
+		
+			.responsivecolumns & {
+				width: 30px;
+				height: 30px;
+				top: 0;
+			}
 
 			&:after {
 				color: @color-swatch1;
@@ -1928,6 +1935,10 @@ footer .widget.profile .twitter,
 				top: -7px;
 			
 				@media @mobile {
+					top: -13px;
+				}
+		
+				.responsivecolumns & {
 					top: -13px;
 				}
 			}
