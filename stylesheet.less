@@ -157,35 +157,35 @@ td {
 	&:last-child {
 		@media @mobile {
 			padding: 0 0.5em 1em;
-			border-bottom: 1px solid fade(@font-swatch5-color, 60%);
+			border-bottom: 1px dotted @font-swatch5-color;
 
 			.style--light & {
-				border-bottom-color: fade(@contrast--light, 60%);
+				border-bottom-color: @contrast--light;
 			}
 		
 			.style--accent & {
-				border-bottom-color: fade(@contrast--accent, 60%);
+				border-bottom-color: @contrast--accent;
 			}
 		
 			.style--dark & {
-				border-bottom-color: fade(@contrast--dark, 60%);
+				border-bottom-color: @contrast--dark;
 			}
 		}
 
 		.responsivecolumns & {
 			padding: 0 0.5em 1em;
-			border-bottom: 1px solid fade(@font-swatch5-color, 60%);
+			border-bottom: 1px dotted @font-swatch5-color;
 
 			.style--light & {
-				border-bottom-color: fade(@contrast--light, 60%);
+				border-bottom-color: @contrast--light;
 			}
 		
 			.style--accent & {
-				border-bottom-color: fade(@contrast--accent, 60%);
+				border-bottom-color: @contrast--accent;
 			}
 		
 			.style--dark & {
-				border-bottom-color: fade(@contrast--dark, 60%);
+				border-bottom-color: @contrast--dark;
 			}
 		}
 	}
