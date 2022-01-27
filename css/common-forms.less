@@ -194,12 +194,13 @@ label,
 // Dropdowns
 
 .select-wrap {
+	position: relative;
 	max-width: 50%;
 
-	@media @mobile {
+	@media @tablet {
 		max-width: 100%;
 	}
-		
+
 	.responsivecolumns & {
 		max-width: 100%;
 	}
@@ -273,7 +274,7 @@ select {
 .widget.ecomcheckout .delivery,
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation {
 	& select {
-		@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
+		@supports (-moz-appearance: meterbar) and (background-blend-mode: difference, normal) {
 			background-image: none;
 		}
 	}
