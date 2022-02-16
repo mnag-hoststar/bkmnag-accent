@@ -221,15 +221,16 @@
 					display: block;
 					margin-top: 1em;
 					margin-bottom: 0.5em;
+					color: darken(@font-swatch5-color,10%);
 
 					.style--light & {
-						color: @contrast--light;
+						color: darken(@font-swatch5-color,10%);
 					}
-
+				
 					.style--accent & {
 						color: @contrast--accent;
 					}
-
+				
 					.style--dark & {
 						color: @contrast--dark;
 					}
@@ -247,7 +248,7 @@
 					width: 100%;
 
 					.style--light & {
-						background-color: @color--light;
+						background-color: @color-swatch1;
 					}
 
 					.style--accent & {
@@ -300,7 +301,7 @@
 	margin: 1em 0;
 
 	.style--light & {
-		color: fade(@contrast--light, 80%);
+		color: fade(@color-swatch5, 60%);
 	}
 
 	.style--accent & {
@@ -357,15 +358,15 @@
 	border: 20px solid darken(@color-swatch1, 10%);
 
 	.style--light & {
-		background-color: @color--light!important;
+		background-color: darken(@color-swatch1, 10%);
 	}
 
 	.style--accent & {
-		background-color: @color--accent!important;
+		background-color: @color--accent !important;
 	}
 
 	.style--dark & {
-		background-color: @color--dark!important;
+		background-color: @color--dark !important;
 	}
 
 	@media @mobile {
@@ -394,15 +395,15 @@
 	line-height: 1.5em;
 
 	.style--light & {
-		color: @contrast--light;
+		border-color: mix(@color-swatch2, @color-swatch1, 6%);
 	}
 
 	.style--accent & {
-		color: @contrast--accent;
+		border-color: mix(@contrast--accent, @color-swatch1, 6%);
 	}
 
 	.style--dark & {
-		color: @contrast--dark;
+		border-color: mix(@contrast--dark, @color-swatch1, 6%);
 	}
 }
 
@@ -413,7 +414,7 @@
 	color: @color-swatch5;
 
 	.style--light & {
-		color: @contrast--light;
+		color: @color-swatch5;
 	}
 
 	.style--accent & {

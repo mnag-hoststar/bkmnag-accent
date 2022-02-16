@@ -59,10 +59,6 @@ blockquote:before,
 label {
     word-break: break-word;
 
-    .style--light & {
-        color: @contrast--light;
-    }
-
     .style--accent & {
         color: @contrast--accent;
     }
@@ -86,7 +82,7 @@ label {
 			color: @font-swatch5-color;
 		
 			.style--light & {
-				color: @contrast--light;
+				color: @font-swatch5-color;
 			}
 		
 			.style--accent & {
@@ -112,18 +108,19 @@ blockquote,
 .widget.image .image-description,
 .blog-post-published-date {
     word-break: break-word;
-  
-    .style--light & {
-        color: fade(@contrast--light, 90%);
-    }
+	color: @font-swatch5-color;
 
-    .style--accent & {
-        color: fade(@contrast--accent, 90%);
-    }
+	.style--light & {
+		color: @font-swatch5-color;
+	}
 
-    .style--dark & {
-        color: fade(@contrast--dark, 90%);
-    }
+	.style--accent & {
+		color: @contrast--accent;
+	}
+
+	.style--dark & {
+		color: @contrast--dark;
+	}
 }
 
 p, ul, ol, li, .p-font, time.blog-post-publish-date {
@@ -173,7 +170,7 @@ pre, code {
 	font-family: monospace;
 
 	.style--light & {
-		background-color: fade(@contrast--light, 10%);
+		background-color: darken(@color-swatch1, 10%);
 	}
 
 	.style--accent & {
@@ -189,7 +186,7 @@ code {
 	border-left: 1px solid @color-swatch5;
 
 	.style--light & {
-		border-color: @contrast--light;
+		border-color: @color-swatch5;
 	}
 
 	.style--accent & {
@@ -215,7 +212,7 @@ blockquote {
 	word-break: break-word;
 
 	.style--light & {
-		color: fade(@contrast--light, 60%);
+		color: fade(@font-swatch5-color, 60%);
 	}
 
 	.style--accent & {
@@ -235,7 +232,10 @@ blockquote {
 		margin-right: 0;
 		vertical-align: -.2em;
 
-		.style--light &,
+		.style--light & {
+			color: @color-swatch3;
+		}
+
 		.style--accent &,
 		.style--dark & {
 			color: @contrast--accent;
@@ -251,7 +251,10 @@ blockquote {
 		margin-left: 0;
 		vertical-align: -.3em;
 
-		.style--light &,
+		.style--light & {
+			color: @color-swatch3;
+		}
+
 		.style--accent &,
 		.style--dark & {
 			color: @contrast--accent;
@@ -268,7 +271,7 @@ blockquote {
 		word-break: break-word;
 
 		.style--light & {
-			background-color: fade(@contrast--light, 20%);
+			background-color: lighten(@color-swatch5, 20%);
 		}
 	
 		.style--accent & {
