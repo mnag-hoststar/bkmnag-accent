@@ -65,6 +65,7 @@ body {
 table {
 	overflow: auto;
 	width: 100%;
+	max-width: 100%;
 	border: none;
 	border-collapse: separate;
 	border-spacing: 0;
@@ -593,12 +594,12 @@ footer.bk-footer {
     	padding: 0 0 @language-padding*2;
 		
     	&:before {
-    	    content: " ";
+    	    content: ' ';
             display: block;
     	    height: @language-line-height;
     	}
     	&:after {
-    	    content: " ";
+    	    content: ' ';
             display: block;
     	    height: @language-padding*2;
     	}
@@ -703,7 +704,7 @@ footer.bk-footer {
 	    &:after {
     		.language-selector.language-selector--dropdown & {
 				position: absolute;
-        		content: "\25be";
+        		content: '\25be';
         		top: @language-padding;
         		right: 0;
         		margin-top: -(@language-line-height/4);
@@ -915,6 +916,7 @@ footer.bk-footer {
 				> .text {
 					display: block;
 					padding: 10px 30px 10px 20px;
+					word-break: break-word;
 
 					@media @tablet {
 						padding: 10px 20px 10px 0;
@@ -1232,9 +1234,21 @@ footer.bk-footer {
 		font-family: @font-swatch4-font-family;
 		font-weight: @font-swatch4-font-weight;
 		font-size: @font-swatch4-font-size;
-		color: @font-swatch4-color;
 		line-height: @font-swatch4-line-height;
 		text-decoration: none;
+		color: @font-swatch4-color;
+		
+		.style--light & {
+			color: @font-swatch4-color;
+		}
+
+		.style--accent & {
+			color: @contrast--accent;
+		}
+
+		.style--dark & {
+			color: @contrast--dark;
+		}
 	
 		&:hover {
 			color: lighten(@font-swatch4-color, 30%);
@@ -1266,6 +1280,18 @@ footer.bk-footer {
 		font-size: @font-swatch5-font-size;
 		line-height: @font-swatch5-line-height;
 		color: @font-swatch5-color;
+
+		.style--light & {
+			color: @font-swatch5-color;
+		}
+
+		.style--accent & {
+			color: @contrast--accent;
+		}
+
+		.style--dark & {
+			color: @contrast--dark;
+		}
 	}
 }
 
@@ -1422,7 +1448,7 @@ hr.line {
 			}
 
 			&:after {
-				content: "";
+				content: '';
 				width: 0;
 				height: 0;
 				border-style: solid;
@@ -1738,13 +1764,13 @@ footer .widget.profile .twitter,
 
 		.btn-prev {
 			&:after {
-				content: "\2190";
+				content: '\2190';
 			}
 		}
 
 		.btn-next {
 			&:after {
-				content: "\2192";
+				content: '\2192';
 			}
 		}
 		
@@ -1845,7 +1871,7 @@ footer .widget.profile .twitter,
 
 	&:before,
 	&:after {
-		content: " ";
+		content: ' ';
 		display: table;
 	}
 	
