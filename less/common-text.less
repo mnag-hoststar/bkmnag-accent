@@ -99,7 +99,6 @@ p {
 }
 
 p, ul, ol, li,
-.contentgroup__body,
 .widget.clicktocall a,
 .widget.clicktocall a:hover,
 blockquote,
@@ -107,6 +106,7 @@ blockquote,
 .blog-post-published-date {
     word-break: break-word;
 	color: @font-swatch5-color;
+    font-size: @font-swatch5-font-size;
 
 	.style--light & {
 		color: @font-swatch5-color;
@@ -121,25 +121,35 @@ blockquote,
 	}
 }
 
-p, ul, ol, li, .p-font, time.blog-post-publish-date {
-    font-size: bkscale(@font-swatch5-font-size, 1);
-    line-height: bkscale(@font-swatch5-line-height, 1);
-    
-    @media @tablet {
-        font-size: bkscale(@font-swatch5-font-size, 0.9);
-        line-height: bkscale(@font-swatch5-line-height, 0.9);
-    }
+.blog-post-published-date {
+	font-size: 1em;
+}
 
-    @media @mobile {
-        font-size: bkscale(@font-swatch5-font-size, 0.8);
-        line-height: bkscale(@font-swatch5-line-height, 0.8);
-    }
+p, ul, ol, li, .p-font, time.blog-post-publish-date {
+    font-size: @font-swatch5-font-size;
+    line-height: @font-swatch5-line-height;
 }
 
 // Links
 
-a:hover {
-	text-decoration: none;
+a {
+	color: @color-swatch3;
+
+	.style--light & {
+		color: @color-swatch3;
+	}
+
+	.style--accent & {
+		color: @color--dark;
+	}
+
+	.style--dark & {
+		color: @color--accent;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 // Lists
@@ -172,11 +182,11 @@ pre, code {
 	}
 
 	.style--accent & {
-		background-color: fade(@contrast--accent, 10%);
+		background-color: darken(@color--accent, 10%);
 	}
 
 	.style--dark & {
-		background-color: fade(@contrast--dark, 10%);
+		background-color: fade(@contrast--dark, 15%);
 	}
 }
 

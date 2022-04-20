@@ -1,11 +1,5 @@
 // FORMS
 
-.widget.contactform,
-.widget.signupform,
-.widget.advancedcontactform {
-	max-width: @max-width;
-}
-
 // Form Group
 
 .form-group {
@@ -19,6 +13,8 @@ button.btn,
 button.button,
 .contactform button,
 .contactform button.btn,
+.signupform fieldset button,
+.signupform fieldset button.btn,
 .advancedcontactform button,
 .advancedcontactform button.btn,
 .widget.tweet a,
@@ -81,6 +77,27 @@ form.blog-search-form .form-group button,
 			background-color: darken(@color--accent, 5%);
 		}
 	}
+
+	&[disabled] {
+		cursor: default;
+		opacity: 0.6;
+
+		&:hover {
+			background-color: @font-swatch7-background-color;
+
+			.style--light & {
+				background-color: @font-swatch7-background-color;
+			}
+		
+			.style--accent & {
+				background-color: @color--dark;
+			}
+		
+			.style--dark & {
+				background-color: @color--accent;
+			}
+		}
+	}
 }
 
 .widget button.btn span {
@@ -135,6 +152,17 @@ form.blog-search-form .form-group button,
     background-position: 1.25em center;
 }
 
+.widget.filedownload div {
+	@media @mobile {
+		float: none;
+	}
+
+	span.file-name {
+		display: block;
+		margin: 0.5em 0;
+	}
+}
+
 // Social Icons
 
 .widget.socialicons,
@@ -183,7 +211,7 @@ form.blog-search-form .form-group button,
 				}
 			
 				.style--dark & {
-					background-color: darken(@color--accent, 10%);
+					background-color: fade(@contrast--accent, 25%);
 				}
 			}
 
@@ -334,11 +362,6 @@ select {
 		border-color: @color--accent;
 	}
 
-	@media @mobile-small {
-		font-size: bkscale(@font-swatch7-font-size, 0.75);
-		height: (@font-swatch7-font-size * 2);
-	} 
-
 	&:hover,
 	&:focus {
 		border-color: @color-swatch2;
@@ -393,7 +416,7 @@ select {
 	}
 
 	.style--dark & {
-		background-color: lighten(@color--dark, 5%);
+		background-color: fade(@contrast--dark, 15%);
 	}
 
 	.style--background-image & {
@@ -416,19 +439,19 @@ select {
 		
 			input {
 				flex-grow: 1;
-				margin-right: 0.5em;
+				margin-right: 1em;
 				background-color: @color-swatch1;
 		
 				@media @mobile {
 					width: 100%;
 					margin-right: 0;
-					margin-bottom: 0.5em;
+					margin-bottom: 1em;
 				}
 		
 				.responsivecolumns & {
 					width: 100%;
 					margin-right: 0;
-					margin-bottom: 0.5em;
+					margin-bottom: 1em;
 				}
 			}
 		}
@@ -487,6 +510,18 @@ select {
 	}
 }
 
+.widget.advancedcontactform .form-group.advancedcontactform__form-group--terms,
+.widget.contactform .form-group.contactform__form-group--terms,
+.widget.signupform .form-group.signupform__form-group--terms {
+    display: block;
+    position: relative;
+	margin: 20px 0 0;
+}
+
+.widget.advancedcontactform .form-group.advancedcontactform__form-group--terms {
+	margin: 20px 0;
+}
+
 .widget .form .option-list,
 .widget .form-group[class*="form-group--terms"] {
 	input[type="radio"],
@@ -515,6 +550,7 @@ select {
 		padding-left: 2em;
 		margin-bottom: 0;
 		line-height: floor(@font-swatch5-line-height*0.8+2);
+		min-height: floor(@font-swatch5-line-height*0.8+2);
 		font-size: @font-swatch5-font-size;
 		word-break: break-word;
 		text-align: left;
@@ -557,6 +593,7 @@ select {
 			width: floor(@font-swatch5-line-height*0.8);
 			background-color: @color-swatch1;
 			border: 1px solid @font-swatch7-background-color;
+			border-radius: 0;
 
 			.style--light & {
 				border-color: @font-swatch7-background-color;
@@ -609,7 +646,8 @@ select {
 	.label--checkbox,
 	label[for*="input--terms"] {
 		&:after {
-			margin-top: floor(@font-swatch5-line-height*-1.2/4);
+			top: 50%;
+			margin-top: floor(@font-swatch5-line-height*-1.2/2)-2;
 			height: floor(@font-swatch5-line-height*1.2);
 			border: 1px solid transparent;
 			box-shadow: -6px -6px 0 0 inset @font-swatch7-background-color;

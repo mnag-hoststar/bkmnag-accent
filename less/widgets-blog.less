@@ -7,7 +7,6 @@
 // BlogSearch
 
 .widget.blogsearch {
-	max-width: @max-width;
 	margin-bottom: 1em;
 
     form {
@@ -59,7 +58,7 @@
 			width: 100%;
 			margin-top: 1em;
 		    margin-right: 1em;
-			margin-bottom: 0.5em;
+			margin-bottom: 1em;
         }
 
         input {
@@ -76,18 +75,18 @@
 		    -webkit-align-self: auto;
 		    -ms-flex-item-align: auto;
 		    align-self: auto;
-			margin-right: 0.5em;
+			margin-right: 1em;
 
 			@media @mobile {
 				width: 100%;
 				margin-right: 0;
-				margin-bottom: 0.5em;
+				margin-bottom: 1em;
 			}
 		
 			.responsivecolumns & {
 				width: 100%;
 				margin-right: 0;
-				margin-bottom: 0.5em;
+				margin-bottom: 1em;
 			}
         }
 
@@ -117,7 +116,7 @@
 	.blog-post-list {
 		.blog-post-item {
 			.clearfix;
-			border-bottom: 1px dotted @color-swatch5;
+			border-bottom: 1px solid @color-swatch5;
 			position: relative;
 			margin-bottom: 70px;
 			padding-bottom: 30px;
@@ -158,16 +157,6 @@
 			    font-size: @font-swatch1-font-size;
 			    margin: 0.6em 0;
 			    padding: 0;
-
-				@media @tablet {
-				    font-size: bkscale(@font-swatch1-font-size, 0.7);
-				    line-height: bkscale(@font-swatch1-line-height, 0.7);
-				}
-			
-				@media @mobile {
-				    font-size: bkscale(@font-swatch1-font-size, 0.4);
-				    line-height: bkscale(@font-swatch1-line-height, 0.4);
-				}
 
 				a {
 					color: @color-swatch3;
@@ -210,7 +199,12 @@
 
 .widget.blogpost {
 	.blog-post-item {
-		.clearfix;
+		display: flex;
+		flex-wrap: wrap;
+
+		@media @tablet {
+			display: block;
+		}
 
 		// Image
 
@@ -231,6 +225,12 @@
 		// Title and Content Wrap
 
 		.blog-post-title-content-wrap {
+			width: 70%;
+
+			@media @tablet {
+				width: auto;
+			}
+
 			h1.blog-post-title {
 				border-bottom: none;
 				padding: 0;
@@ -241,73 +241,52 @@
 			    line-height: @font-swatch1-line-height;
 			    letter-spacing: @font-swatch1-letter-spacing;
 			    font-size: @font-swatch1-font-size;
-
-			    @media @bp-blog-compact {
-			    	font-size: bkscale(@font-swatch1-font-size, 0.7);
-				    line-height: bkscale(@font-swatch1-line-height, 0.7);
-			    }
 			}
 			
 			.blog-post-content, .blog-post-body {
-				float: left;
-				width: 70%;
 				padding: 0 50px 40px 0;
 
-				@media @bp-blog-small {
-			    	float: none;
-			    	width: auto;
-			    	padding: 0 0 40px 0;
-			    }
+				@media @tablet {
+					padding: 0;
+				}
 			}
 		}
 		
 		.blog-post-metadata {
+			width: 30%;
+			margin: 3em 0;
+
+			@media @tablet {
+				width: 100%;
+			}
+
 			time.blog-post-publish-date {
 				color: @color-swatch5;
 				font-size: @font-swatch5-font-size;
 				border-bottom: 1px solid fade(@color-swatch5,20%);
 				display: block;
-				float: right;
-				width: 30%;
 				padding: 0 0 1em 0;
-
-				@media @bp-blog-small {
-			    	float: none;
-			    	width: auto;
-			    }
-
-			    @media @mobile {
-			    	padding: 0 0 0.5em 0;
-			    }
 			}
 			
 			.blog-post-category,
 			.blog-post-tags {
-				float: right;
-				width: 30%;
-				padding: 1em 0;
-
-				@media @bp-blog-small {
-			    	float: none;
-			    	width: auto;
-			    }
-
-			    @media @mobile {
-			    	padding: 0.5em 0;
-			    }
+				padding: 1em 0 0;
 
 				a {
 					display: inline-block;
 					padding: 0em 0.7em;
 					background-color: @font-swatch7-background-color;
 					color: @font-swatch7-color;
-					border: 1px solid darken(@color-swatch3,5%);
-					box-shadow: 0px 3px 0px darken(@color-swatch3,15%); 
+					border: 1px solid darken(@color-swatch3, 5%);
 
 					&:hover {
 						text-decoration: none;
 						background-color: darken(@color-swatch3, 5%);
 					}
+				}
+
+				.blog-post-category {
+					float: none;
 				}
 			}
 
@@ -323,13 +302,6 @@
 
 		.blog-post-sharing {
 			margin-top: 2em;
-			float: right;
-			width: 30%;
-
-			@media @bp-blog-small {
-		    	float: none;
-		    	width: auto;
-		    }
 
 			button.btn {
 				width: 40px;
@@ -343,11 +315,6 @@
 				border: 2px solid mix(@color-swatch6, @color-swatch1, 12%);
 				margin-right: 0.4em;
 				box-shadow: none;
-
-				@media @mobile {
-					width: 40px;
-					height: 40px;
-				}
 
 				&:hover {
 					border-color: darken(@font-swatch7-color,5%);
