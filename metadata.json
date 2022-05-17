@@ -125,7 +125,7 @@
             "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "42px",
             "font-weight": "400",
-            "line-height": "36px",
+            "line-height": "48px",
             "color": "darken(@color-swatch4,20%)",
             "letter-spacing": "inherit"
         },

@@ -879,6 +879,11 @@ footer.bk-footer {
 				}
 			}
 
+			a,
+			a span {
+				color: @font-swatch6-color;
+			}
+
 			a {
 				display: block;
 				padding: 10px 20px;
@@ -1269,7 +1274,7 @@ footer.bk-footer {
 		font-family: @font-swatch5-font-family;
 		font-weight: @font-swatch5-font-weight;
 		font-size: @font-swatch5-font-size;
-		line-height: @font-swatch5-line-height;
+		line-height: 1.4em;
 		color: @font-swatch5-color;
 
 		.style--light & {
@@ -1307,7 +1312,7 @@ hr.line {
     }
 
     .style--dark & {
-        background-color: fade(@contrast--dark, 15%);
+        background-color: fade(@contrast--dark, 20%);
     }
 }
 
@@ -1447,7 +1452,7 @@ hr.line {
 			}
 		
 			.style--dark & {
-				background-color: fade(@contrast--dark, 15%);
+				background-color: fade(@contrast--dark, 20%);
 				color: @contrast--dark;
 			}
 
@@ -1503,7 +1508,7 @@ hr.line {
 		}
 
 		.style--dark & {
-			background-color: fade(@contrast--dark, 15%);
+			background-color: fade(@contrast--dark, 20%);
 		}
 
 		li {
@@ -1759,7 +1764,7 @@ hr.line {
 		}
 
 		.style--dark & {
-			background-color: fade(@contrast--dark, 15%);
+			background-color: fade(@contrast--dark, 20%);
 		}
 	}
 
@@ -1775,7 +1780,7 @@ hr.line {
 
 	.title + .description {
 		padding-top: 0;
-		margin-top: -10px;
+		margin-top: -15px;
 	}
 
 	.content-wrapper {
@@ -1872,6 +1877,8 @@ hr.line {
 	}
 	
 	.slideshow-widget-controls {
+		margin-bottom: 20px;
+		
 		.dot {
 			width: 8px;
 			height: 8px;

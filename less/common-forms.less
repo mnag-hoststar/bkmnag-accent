@@ -19,6 +19,7 @@ button.button,
 .advancedcontactform button.btn,
 .widget.tweet a,
 .widget.clicktocall a,
+.widget.clicktocall a:hover,
 .widget.dropbox button,
 .widget.filedownload button.btn,
 .widget.paypalbuynow .widget.button.paypal,
@@ -33,7 +34,7 @@ form.blog-search-form .form-group button,
 	display: inline-block;
 	padding: 7px 15px;
 	min-height: 40px;
-	height: auto !important;
+	height: auto;
 	user-select: none;
 	line-height: @font-swatch7-line-height;
 	font-family: @font-swatch7-font-family;
@@ -99,22 +100,22 @@ form.blog-search-form .form-group button,
 			}
 		}
 	}
-}
-
-.widget button.btn span {
-	color: @font-swatch7-color;
-
-	.style--light & {
+	
+	span {
 		color: @font-swatch7-color;
+	
+		.style--light & {
+			color: @font-swatch7-color;
+		}
+	
+		.style--accent & {
+			color: @contrast--dark;
+		}
+	
+		.style--dark & {
+			color: @contrast--accent;
+		}
 	}
-
-	.style--accent & {
-		color: @contrast--dark;
-	}
-
-	.style--dark & {
-		color: @contrast--accent;
-	} 
 }
 
 // Image Buttons
@@ -138,7 +139,7 @@ form.blog-search-form .form-group button,
 		padding-right: 0.25em;
 		background-image: none;
 		font-family:'FontAwesome';
-		font-size: 1.25em;
+		font-size: 1em;
 	}
 }
 
@@ -174,15 +175,13 @@ form.blog-search-form .form-group button,
 	
 	span {
 		a {
-			display: flex;
-			justify-content: center;
-			align-items: center;
 			background-image: none;
 			margin: 0 5px 10px;
 			padding: 0;
 			width: 32px;
 			height: 32px;
 			min-height: 32px;
+			line-height: 32px;
 			border-radius: 50%;
 			text-indent: 0;
 			font-size: 0;
@@ -219,7 +218,7 @@ form.blog-search-form .form-group button,
 			&:before {
 				font-family: 'FontAwesome';
 				text-indent: 0;
-				font-size: 24px;
+				font-size: 20px;
 			}
 		}
 
@@ -245,8 +244,9 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus {
 	background-color: darken(@color-swatch1, 10%);
 	border: none;
-	height: 40px;
-	padding: .6em 1em;
+	min-height: 40px;
+    height: auto !important;
+	padding: 0 1em;
 	text-indent: 0;
 
 	.style--light & {
@@ -274,7 +274,8 @@ input:-webkit-autofill:focus {
 	}
 }
 
-textarea {
+textarea,
+form textarea {
 	min-height: 8em;
 }
 
@@ -417,7 +418,7 @@ select {
 	}
 
 	.style--dark & {
-		background-color: fade(@contrast--dark, 15%);
+		background-color: fade(@contrast--dark, 20%);
 	}
 
 	.style--background-image & {

@@ -99,14 +99,11 @@ p {
 }
 
 p, ul, ol, li,
-.widget.clicktocall a,
-.widget.clicktocall a:hover,
-blockquote,
+span, blockquote,
 .widget.image .image-description,
 .blog-post-published-date {
     word-break: break-word;
 	color: @font-swatch5-color;
-    font-size: @font-swatch5-font-size;
 
 	.style--light & {
 		color: @font-swatch5-color;
@@ -132,7 +129,8 @@ p, ul, ol, li, .p-font, time.blog-post-publish-date {
 
 // Links
 
-a {
+a,
+a span {
 	color: @color-swatch3;
 
 	.style--light & {
@@ -186,7 +184,7 @@ pre, code {
 	}
 
 	.style--dark & {
-		background-color: fade(@contrast--dark, 15%);
+		background-color: fade(@contrast--dark, 20%);
 	}
 }
 
