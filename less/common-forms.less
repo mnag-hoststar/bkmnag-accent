@@ -248,29 +248,16 @@ input:-webkit-autofill:focus {
     height: auto !important;
 	padding: 9px 1em;
 	text-indent: 0;
+	color: @font-swatch5-color;
 
-	.style--light & {
-		background-color: darken(@color-swatch1, 10%);
-		color: @color-swatch1;
-	}
-
+	.style--light &,
 	.style--accent &,
 	.style--dark & {
-		background-color: @color--light;
-		color: @contrast--light;
+		color: @font-swatch5-color;
 	}
 
 	&:focus {
 		background-color: darken(@color-swatch1, 5%);
-
-		.style--light & {
-			background-color: darken(@color-swatch1, 5%);
-		}
-
-		.style--accent &,
-		.style--dark & {
-			background-color: darken(@color--light, 5%);
-		}
 	}
 }
 
