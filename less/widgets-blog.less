@@ -272,6 +272,13 @@
 				display: block;
 				padding: 0 0 1em 0;
 			}
+
+			.blog-post-category-label,
+			.blog-post-tags-label {
+				&:after {
+					content: ':\00a0';
+				}
+			}
 			
 			.blog-post-category,
 			.blog-post-tags {
@@ -279,26 +286,19 @@
 
 				a {
 					display: inline-block;
-					padding: 0em 0.7em;
+					margin-bottom: 0.5em;
+					padding: 0.05em 0.7em;
 					background-color: @font-swatch7-background-color;
+					border: none;
 					color: @font-swatch7-color;
-					border: 1px solid darken(@color-swatch3, 5%);
 
 					&:hover {
 						text-decoration: none;
-						background-color: darken(@color-swatch3, 5%);
 					}
 				}
 
 				.blog-post-category {
 					float: none;
-				}
-			}
-
-			.blog-post-category-label,
-			.blog-post-tags-label {
-				&:after {
-					content: ':\00a0';
 				}
 			}
 		}
